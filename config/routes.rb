@@ -1,4 +1,4 @@
-DougTeixeira::Application.routes.draw do
+LamingtonProperties::Application.routes.draw do
   resources :projects
 
   resources :users
