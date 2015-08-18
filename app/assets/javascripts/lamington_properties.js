@@ -4,10 +4,6 @@ window.LamingtonProperties = {
   Views: {},
   Routers: {},
   initialize: function() {
-    alert('Hello from Backbone!');
+    // alert('Hello from Backbone!');
   }
 };
-
-$(document).ready(function(){
-  LamingtonProperties.initialize();
-});

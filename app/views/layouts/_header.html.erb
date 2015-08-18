@@ -3,23 +3,9 @@
     <div class="container">
       <figure id="logo" class="logo">
         <span class="anchor" id="home"></span>
-        <%= link_to root_path(anchor: "home"), class: "anchored", data: {anchor: "#home"} do %>
-          <img class="site-logo" src="<%= image_url("douglas_teixeira_logo_298x59.png") %>" alt="Weight Tracker">
-        <% end %>
+        <%= link_to "Lamington Properties LLC", root_path(anchor: "home"), class: "anchored site-logo-link", data: {anchor: "#home"} %>
         <figcaption id="site-slogan">     
-          <ul class="list-group contact-blurb">
-            <li class="list-group-item">
-              <%= link_to page_path("contact") do %>
-                <i class="fa fa-phone-square fa-lg"></i> (908) 901-9905
-              <% end %>      
-            </li>
-            
-            <li class="list-group-item list-group-link">
-              <%= link_to "mailto:info[at]lamingtonproperties[dot]com", target: "", alt: "Email" do %>
-                <i class="fa fa-envelope-square fa-lg"></i> info@lamingtonproperties.com
-              <% end %>
-            </li>
-          </ul>
+        </figcaption>
       </figure>
     </div>
   </nav>
@@ -28,38 +14,47 @@
     <div class="container-fluid">
 
       <div class="navbar-header">
-        <a class="navbar-brand navbar-brand-small" href="<%= root_url %>"><%= image_tag("portfolio_logo_small_60x48.png") %></a>
+        <!-- <a class="navbar-brand navbar-brand-small" href="<%= root_url %>"><%= image_tag("portfolio_logo_small_60x48.png") %></a> -->
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1">
           <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
+          <span class="icon-bar top-bar"></span>
+          <span class="icon-bar middle-bar"></span>
+          <span class="icon-bar bottom-bar"></span>
         </button>
       </div>
 
       
       <div class="main-nav collapse navbar-collapse" id="navbar-collapse-1">
-        <ul class="nav navbar-nav">
-          <%= link_to root_url, class: "navbar-brand navbar-brand-big" do %>
-            <%= image_tag("portfolio_logo_small_60x48.png", alt: "DougTeixeira.com Logo") %>
-          <% end %>
-          <li>
-            <%= link_to "Home", root_path(anchor: "welcome"), class: "anchored", data: {anchor: "#welcome"}%>
-          </li>
-          
-        </ul>
         
-        <ul class="nav navbar-nav nav-pills navbar-right">
+        <ul class="nav navbar-nav nav-pills">
          <li class="active">
-           <%= link_to root_path(anchor: "about"), class: "anchored", data: {anchor: "#about"} do %>
-            About <span class="sr-only">(current)</span>
+           <%= link_to root_path(anchor: "Company"), class: "anchored", data: {anchor: "#about"} do %>
+             Company <span class="sr-only">(current)</span>
            <% end %>
          </li>
           <li>
-            <%= link_to "Projects", root_path(anchor: "projects"), class: "anchored", data: {anchor: "#projects"} %>
+            <%= link_to "Properties",
+              root_path(anchor: "projects"),
+              class: "anchored",
+              data: {anchor: "#projects"} %>
           </li>
          <li>
-           <%= link_to "Contact", root_path(anchor: "contact"), class: "anchored", data: {anchor: "#contact"} %>
+           <%= link_to "Contact",
+             root_path(anchor: "contact"),
+             class: "anchored",
+             data: {anchor: "#contact"} %>
+         </li>
+         <li>
+           <%= link_to "News",
+             root_path(anchor: "contact"),
+             class: "anchored",
+             data: {anchor: "#contact"} %>
+         </li>
+         <li>
+           <%= link_to "Services",
+             root_path(anchor: "contact"),
+             class: "anchored",
+             data: {anchor: "#contact"} %>
          </li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="caret"></span></a>
