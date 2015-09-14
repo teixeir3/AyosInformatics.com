@@ -105,7 +105,7 @@ $font-size-base: 20px;
 }
 
 .background-image {
-//  background-size: cover;
+  background-size: cover;
   background-attachment: fixed;
 }
 
@@ -262,9 +262,27 @@ figure.figure {
   //text-shadow:-1px 0 $text-shadow, 0 1px $text-shadow, 1px 0 $text-shadow, 0 -1px $text-shadow;
 }
 
+.about {
+  background-image: image-url("backgrounds/featured-property_1.jpg");
+  background-size: cover;
+  color: white;
+}
+
+.services {
+  background-image: image-url("backgrounds/demographic_1.jpg");
+  background-size: cover;
+  color: white;
+}
+
+.founder-link {
+  &:hover {
+    opacity: .7;
+  }
+}
+
 .contact {
   color: white;
-//  background-image: url("dt_bg_2_580x656.png");
+  background-image: url("backgrounds/service-areas_1.jpg");
   background-color: #AA5839;
   
   .contact-header .page-header small {
