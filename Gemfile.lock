@@ -250,7 +250,7 @@ DEPENDENCIES
   pg
   pg_search
   pry-rails
-  rails (= 4.0.2)
+  rails
   rails-gallery
   rename
   sass-rails (~> 4.0.0)

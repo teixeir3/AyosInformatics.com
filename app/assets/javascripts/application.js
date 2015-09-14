@@ -102,33 +102,13 @@ var rowFadeout = function() {
   };
   
 var collapseCheck = function() {
-  scrollCheck(53);
   
-  if (scrollCheck(53)) {
+  if (scrollCheck(54)) {
     addClasses({'body': 'collapsed'});
   } else {
     removeClasses({'body': 'collapsed'});
   }
 };
-
-var sidebarCheck = function() {
-  if (checkSize() && scrollCheck($(".sidebar").height() + $(".navbar-inverse").height())) {
-    $(".sidebar").fadeOut();
-    addClasses({".row": "main-content-full"});
-  } else if ($(".row").hasClass("main-content-full")) {
-    removeClasses({".row": "main-content-full"});
-    fadeInElement($(".sidebar"), 1000);
-  }
- 
-};
-
-// var transformMainContentCheck = function() {
-//   if (scrollCheck(($("header").height()+2))) {
-//     addClasses({".row": "main-content-full"});
-//   } else {
-//    removeClasses({".row": "main-content-full"});
-//   }
-// };
 
 var addClasses = function(classHash) {
   for (var key in classHash) {
@@ -142,6 +122,7 @@ var removeClasses = function(classHash) {
   }
 };
 // toggleHash is a hash matching pattern [{ "elem": "addClassName"}, { "elem": "removeClassName"}]
+
 var scrollCheck = function(breakPoint) {
 
   if ($(this).scrollTop() >= breakPoint) {
@@ -239,7 +220,7 @@ $(document).on('page:fetch', function() {
 $(document).ready(function(){
   setFilepickerKey();
   window.spinner.off();
-  // $(window).scroll(collapseCheck);
+  $(window).scroll(collapseCheck);
   // $(window).scroll(sidebarCheck);
   // $(window).resize(sidebarCheck);
 

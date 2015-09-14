@@ -3,7 +3,7 @@
     <div class="container">
       <figure id="logo" class="logo">
         <span class="anchor" id="home"></span>
-        <%= link_to "Lamington Properties LLC", root_path(anchor: "home"), class: "anchored site-logo-link", data: {anchor: "#home"} %>
+        <%= link_to "Lamington Properties LLC", root_path(anchor: "home"), class: "anchored site-logo-link navbar-brand-big", data: {anchor: "#home"} %>
         <figcaption id="site-slogan">     
         </figcaption>
       </figure>
@@ -11,10 +11,10 @@
   </nav>
 
   <nav class="navbar navbar-inverse">
-    <div class="container-fluid">
+    <div class="container-fluid nav-container">
 
       <div class="navbar-header">
-        <!-- <a class="navbar-brand navbar-brand-small" href="<%= root_url %>"><%= image_tag("portfolio_logo_small_60x48.png") %></a> -->
+        <a class="navbar-brand navbar-brand-small site-logo-link" href="<%= root_url %>">LP</a>
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar top-bar"></span>
@@ -26,7 +26,7 @@
       
       <div class="main-nav collapse navbar-collapse" id="navbar-collapse-1">
         
-        <ul class="nav navbar-nav nav-pills">
+        <ul class="nav navbar-nav">
          <li class="active">
            <%= link_to root_path(anchor: "Company"), class: "anchored", data: {anchor: "#about"} do %>
              Company <span class="sr-only">(current)</span>
@@ -34,9 +34,9 @@
          </li>
           <li>
             <%= link_to "Properties",
-              root_path(anchor: "projects"),
+              root_path(anchor: "properties"),
               class: "anchored",
-              data: {anchor: "#projects"} %>
+              data: {anchor: "#properties"} %>
           </li>
          <li>
            <%= link_to "Contact",
@@ -48,24 +48,22 @@
            <%= link_to "News",
              root_path(anchor: "contact"),
              class: "anchored",
-             data: {anchor: "#contact"} %>
+             data: {anchor: "#news"} %>
          </li>
          <li>
            <%= link_to "Services",
-             root_path(anchor: "contact"),
+             page_path("services"),
              class: "anchored",
-             data: {anchor: "#contact"} %>
+             data: {anchor: "#services"} %>
          </li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="caret"></span></a>
-          <ul class="dropdown-menu inverse-dropdown" role="menu">
+          <ul class="text-center dropdown-menu inverse-dropdown" role="menu">
             <% if signed_in? %>
               <li><%= button_to "Sign Out", session_url, method: :delete, class: "btn btn-link" %></li>
             <% else %>
               <li><%= link_to "Sign In", new_session_url %></li>
             <% end %>
-            <li class="divider"></li>
-            <li><a href="#">Demo (Coming Soon!)</a></li>
           </ul>
         </li>
         </ul>
