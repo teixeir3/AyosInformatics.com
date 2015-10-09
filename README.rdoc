@@ -1,28 +1,14 @@
-== README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# LamingtonProperties.com
+* Home page for Lamington Properties LLC. 
+* Lamington Properties LLC, founded in 2002, is a licensed New Jersey independent real estate brokerage firm which provides strategic advisory and transaction services to its clients.  We are a valued partner to business owners, professionals and individuals who seek high-quality, personalized expertise to accomplish their goals.  Our professionals possess significant real estate brokerage and development experience and are particularly proud to hold extended relationships with our clients for many years.
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+[Live]:http://www.LamingtonProperties.com
+
+
+## TODO
+* Add Standard content
+* Add News
+* Add Properties
+* Add Services
