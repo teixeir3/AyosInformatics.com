@@ -6,6 +6,22 @@ class ApplicationController < ActionController::Base
 
   private
   
+  
+  def set_articles
+    @articles = Article.all_display
+  end
+  # def set_downloads
+  #   @downloads = Download.all_display
+  # end
+  #
+  # def set_observances
+  #   @observances = Observance.all_display
+  # end
+  #
+  # def set_observances_current_month
+  #   @observances = Observance.current_month_display
+  # end
+  
   def set_facebook_feed
     user = User.find_by_credentials(ENV["DEV_EMAIL"], ENV["DEV_PASSWORD"])
     @feed ||= user.facebook.get_connection(ENV["FB_PAGE_NAME"], "feed", {limit: 15}) if user && user.valid_facebook?

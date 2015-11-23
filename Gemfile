@@ -36,7 +36,7 @@ gem 'high_voltage'
 # gem "less-rails"
 
 
-
+gem 'nokogiri'
 gem 'paperclip', "~> 4.1"
 gem 'aws-sdk'
 gem 'rails-gallery'

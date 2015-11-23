@@ -215,14 +215,14 @@ $(document).on('page:fetch', function() {
 // Bind event listeners for TurboLinks
 // $(document).on('page:change', function() {
   
+$(document).on('page:change', function() {
+  window.spinner.off();
+});
 // use doc.ready for backbone.js. not compatible with 
 $(document).ready(function(){
   setFilepickerKey();
   window.spinner.off();
   $(window).scroll(collapseCheck);
-  // $(window).scroll(sidebarCheck);
-  // $(window).resize(sidebarCheck);
-
   
   fadeOutElement($('.errors'), 6000);
   fadeOutElement($('.notices'), 6000);
@@ -232,19 +232,14 @@ $(document).ready(function(){
     uploadClass: "btn btn-success"
   });
   
+  
   $('.anchored').on("click", function(event) {
-
-
     var $el = $($(event.target).data("anchor"));
-
-   
-   
      
     if ($el.length > 0) {
       event.preventDefault(); 
       $el.animatescroll({});
     }
-
   });
   
   
@@ -253,7 +248,6 @@ $(document).ready(function(){
   $('.login').on("click", window.modal.show);
   
   $(".modal").on("click", function(event){
-
     $target = $(event.target);
 
     if($target.is(".modal") || $target.is(".modal-close-button")){
@@ -263,6 +257,5 @@ $(document).ready(function(){
   });
   
   LamingtonProperties.initialize();
-
   
 });

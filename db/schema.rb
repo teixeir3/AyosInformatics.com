@@ -11,12 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150404203202) do
+ActiveRecord::Schema.define(version: 20151123201927) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "pictures", force: true do |t|
+  create_table "articles", force: :cascade do |t|
+    t.integer  "user_id",                    null: false
+    t.string   "title"
+    t.string   "url"
+    t.text     "description"
+    t.integer  "ord"
+    t.boolean  "display",     default: true, null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "articles", ["user_id"], name: "index_articles_on_user_id", using: :btree
+
+  create_table "pictures", force: :cascade do |t|
     t.string   "title"
     t.integer  "position"
     t.boolean  "display",            default: true, null: false
@@ -30,10 +43,10 @@ ActiveRecord::Schema.define(version: 20150404203202) do
     t.datetime "image_updated_at"
   end
 
-  add_index "pictures", ["imageable_id", "imageable_type"], name: "index_pictures_on_imageable_id_and_imageable_type", using: :btree
+  add_index "pictures", ["imageable_type", "imageable_id"], name: "index_pictures_on_imageable_type_and_imageable_id", using: :btree
   add_index "pictures", ["imageable_type"], name: "index_pictures_on_imageable_type", using: :btree
 
-  create_table "projects", force: true do |t|
+  create_table "projects", force: :cascade do |t|
     t.string   "title"
     t.string   "url"
     t.text     "description"
@@ -44,7 +57,7 @@ ActiveRecord::Schema.define(version: 20150404203202) do
     t.string   "source_url"
   end
 
-  create_table "users", force: true do |t|
+  create_table "users", force: :cascade do |t|
     t.string   "email",                                                         null: false
     t.string   "first_name"
     t.string   "last_name"
@@ -64,7 +77,6 @@ ActiveRecord::Schema.define(version: 20150404203202) do
     t.boolean  "display",                default: true,                         null: false
     t.integer  "position"
     t.string   "title"
-    t.string   "string"
     t.text     "bio"
     t.string   "phone"
     t.string   "work_phone"

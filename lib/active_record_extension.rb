@@ -25,6 +25,10 @@ module ActiveRecordExtension
 
       token
     end
+    
+    def all_display
+        self.where(display: true).order(:ord).all
+    end
   end
 end
 

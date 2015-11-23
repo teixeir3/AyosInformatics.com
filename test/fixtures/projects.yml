@@ -3,14 +3,14 @@
 # Table name: projects
 #
 #  id          :integer          not null, primary key
-#  title       :string(255)
-#  url         :string(255)
+#  title       :string
+#  url         :string
 #  description :text
 #  ord         :integer
 #  display     :boolean          default(TRUE), not null
 #  created_at  :datetime
 #  updated_at  :datetime
-#  source_url  :string(255)
+#  source_url  :string
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html

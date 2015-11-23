@@ -1,8 +1,9 @@
 # == Schema Information
 #
-# Table name: projects
+# Table name: articles
 #
 #  id          :integer          not null, primary key
+#  user_id     :integer          not null
 #  title       :string
 #  url         :string
 #  description :text
@@ -10,12 +11,11 @@
 #  display     :boolean          default(TRUE), not null
 #  created_at  :datetime
 #  updated_at  :datetime
-#  source_url  :string
 #
 
 require 'test_helper'
 
-class ProjectTest < ActiveSupport::TestCase
+class ArticleTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

@@ -1,8 +1,9 @@
 # == Schema Information
 #
-# Table name: projects
+# Table name: articles
 #
 #  id          :integer          not null, primary key
+#  user_id     :integer          not null
 #  title       :string
 #  url         :string
 #  description :text
@@ -10,11 +11,10 @@
 #  display     :boolean          default(TRUE), not null
 #  created_at  :datetime
 #  updated_at  :datetime
-#  source_url  :string
 #
 
-class Project < ActiveRecord::Base
-  validates :title, :url, :description, presence: true
+class Article < ActiveRecord::Base
+  validates :title, :description, presence: true
   
   belongs_to(
     :user,

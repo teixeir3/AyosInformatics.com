@@ -22,7 +22,7 @@ class CreateUsers < ActiveRecord::Migration
       
       t.boolean :display, null: false, default: true
       t.integer :position
-      t.string :title, :string
+      t.string :title
       t.text :bio
       t.string :phone
       t.string :work_phone 
