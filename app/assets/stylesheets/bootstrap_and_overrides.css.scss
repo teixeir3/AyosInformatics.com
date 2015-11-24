@@ -415,6 +415,8 @@ body {
   letter-spacing: 2px;
   text-shadow: -1px -1px 1px #FFFFFF, 1px 1px 1px #000000;
   color: $brand-primary !important;
+  background-image: url("ayos_final_300x200.gif");
+  content: "";
   &.navbar-brand-small {
     font-size: 0px;
   }

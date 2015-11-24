@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-LamingtonProperties::Application.load_tasks
+AyosInformaticsCom::Application.load_tasks

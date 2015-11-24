@@ -1,4 +1,4 @@
-LamingtonProperties::Application.routes.draw do
+AyosInformaticsCom::Application.routes.draw do
   # resources :projects
 #
 #   resources :users

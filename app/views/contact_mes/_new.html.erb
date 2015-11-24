@@ -1,14 +1,14 @@
 <div class="col-xs-12 col-sm-6 text-center contact-header">
   <span class="anchor" id="contact"></span>
   <div class="page-header">
-    <h2>Todd Stires</h2>
-    <h3>Senior Partner</h3>
+    <h2><%= ENV['OWNER_NAME'] %></h2>
+    <h3><%= ENV['OWNER_TITLE'] %></h3>
       <small>
-        Lamington Properties LLC
+        <%= ENV['ADDRESS_1'] %>
         <br>
-        Post Office Box 300
+        <%= ENV['ADDRESS_2'] %>
         <br>
-        Bedminster, NJ  07921
+        <%= ENV['ADDRESS_3'] %>
       </small>
   </div>
 </div>
@@ -16,21 +16,15 @@
   <ul class="list-group contact-blurb">
     <li class="list-group-item">
       <i class="fa fa-phone fa-lg"></i>
-      <span class="sr-only">Office Phone:</span>
-      (908) 901-9905
+      <span class="sr-only">Phone:</span>
+      <%= ENV['PHONE'] %>
     </li>
-  
-    <li class="list-group-item">
-      <i class="fa fa-fax fa-lg"></i>
-      <span class="sr-only">Office Fax:</span>
-      (908) 901-9907
-    </li>
-  
+
     <li class="list-group-item list-group-link">
-      <%= link_to "mailto:info[at]lamingtonproperties[dot]com", target: "", alt: "Email" do %>
+      <%= link_to "mailto:info[at]ayosinformatics[dot]com", target: "", alt: "Email" do %>
         <i class="fa fa-envelope-o fa-lg"></i>
         <span class="sr-only">Email:</span>
-        info@lamingtonproperties.com
+        info@ayosinformatics.com
       <% end %>
     </li>
   </ul>

@@ -1,6 +1,6 @@
 <div class="col-xs-12 text-center row-padding founder-link">
   <%= link_to page_path("founder"), class: "text-center" do %>
-    <%= image_tag "ToddStires150x150.png", class: "img-circle" %>
-    <h3>Meet our founder: Todd Stires</h3>
+    <%= image_tag "douglas-teixeira-200x200.jpg", class: "img-circle" %>
+    <h3>Meet our founder: <%= ENV["OWNER_NAME"] %></h3>
   <% end %>
 </div>

@@ -2,7 +2,7 @@
 require File.expand_path('../application', __FILE__)
 
 # Initialize the Rails application.
-LamingtonProperties::Application.initialize!
+AyosInformaticsCom::Application.initialize!
 
 if Rails.env.production?
 
